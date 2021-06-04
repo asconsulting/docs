@@ -1,16 +1,12 @@
 ---
 title: 'Manage Themes'
-description: 'In Contao, a finished design is called a "theme", which in German means something like "Thema" or "Motiv".'
+description: 'In Contao, a finished design is called a "theme". You manage your Contao themes with the theme manager.'
 aliases:
     - /en/layout/theme-manager/manage-themes/
 weight: 10
 ---
 
-{{% notice warning %}}
-This article is machine translated.
-{{% /notice %}}
-
-In Contao, a finished design is called a "theme", which means "theme" or "motif" in German, but in fact, even in this country, the English term "Theme" is mainly used for graphical user interfaces, so there is no really adequate German translation. You manage your Contao themes with the theme manager.
+In Contao, a finished design is called a "theme". You manage your Contao themes with the theme manager.
 
 ## Components of a theme
 
@@ -24,22 +20,22 @@ A theme combines all design-relevant elements of a website:
 - the used files
 - possibly customized templates
 
-Unlike stylesheets, frontend modules, page layouts and image sizes that are stored in the database, files and templates are located in a subdirectory of your Contao installation. A template is a PHP file that you can use to specify the HTML output of a certain element or module.
+Unlike stylesheets, frontend modules, page layouts and image sizes are stored in the database. Files and templates are located in a subdirectory of your Contao installation. A template is a PHP file that you can use to specify the HTML output of a certain element or module.
 
-When selecting the files, make sure that you only link those files to the theme that actually belong to the design. The Contao upload directory contains all user files, including background images and icons as well as photos, videos, PDF documents, Word files, etc. The distinction between design and content is up to you in the file system alone in your preferred organizational approach.
+When selecting the files, make sure that you only link those files to the theme that actually belong to the design. The Contao upload directory contains all user files, including background images and icons as well as photos, videos, PDF documents, Word files, etc. The distinction between design and content is up to your preferred organizational approach in the file system.
 
 ## Configuring Themes
 
 The operation of the Theme Manager works just like most other backend modules, using navigation icons.
 
-![Navigation icons in the Theme Manager](/de/layout/theme-manager/images/de/navigationssymbole-im-theme-manager.png?classes=shadow)
+![Navigation icons in the Theme Manager](/en/layout/theme-manager/images/en/navigation-icons-in-theme-manager.png?classes=shadow)
 
 - ![Edit Theme](/de/icons/edit.svg?classes=icon) Edit Theme
 - ![Delete Theme](/de/icons/delete.svg?classes=icon) Delete a theme
 - ![Show details of the theme](/de/icons/show.svg?classes=icon) Show details of the theme
 - ![Edit the stylesheets of the theme](/de/icons/css.svg?classes=icon) Edit the stylesheets of the theme
-- ![Editing the frontend modules of the Theme](/de/icons/modules.svg?classes=icon) The frontend modules of the theme editing
-- ![Edit the page layouts of the theme](/de/icons/layout.svg?classes=icon) The page layouts of the theme editing
+- ![Editing the frontend modules of the Theme](/de/icons/modules.svg?classes=icon) Edit the frontend modules of the theme
+- ![Edit the page layouts of the theme](/de/icons/layout.svg?classes=icon) Edit the page layouts of the theme
 - ![Edit the image sizes of the theme](/de/icons/sizes.svg?classes=icon) Edit the image sizes of the theme
 - ![Export Theme](/de/icons/theme_export.svg?classes=icon) Export Theme
 
@@ -64,7 +60,7 @@ The theme file contains the following resources:
 | Name | Declaration |
 | ---- | ----------- |
 | theme.xml | This XML file contains all records from the Contao database that are related to the theme or its components. |
-| files | This folder contains all files from the Contao upload directory that have been associated with the theme. It does not matter whether the upload directory in your installation is actually `files`called Contao or not. |
+| files | This folder contains all files from the Contao upload directory that have been associated with the theme. It does not matter whether the upload directory in your Contao installation is actually named `files` or not. |
 | templates | This folder contains all the files from the Templates directory that have been linked to the theme. If there are no customized templates, the folder does not appear in the export file. |
 
 ## Importing Themes
@@ -73,28 +69,28 @@ To import a theme, click on the **Import Theme** button in the Theme Manager, se
 
 Contao then performs a series of checks to detect possible incompatibilities between the theme and your Contao installation.
 
-![The theme data is checked](/de/layout/theme-manager/images/de/die-theme-daten-werden-ueberprueft.png?classes=shadow)
+![The theme data is checked](/en/layout/theme-manager/images/en/the-theme-data-is-checked.png?classes=shadow)
 
 The review shall include in particular
 
 - checking the tables for missing fields
-- the check for non-existent layout areas
-- the check for already existing templates
+- check for non-existent layout areas
+- check for already existing templates
 
-If a theme contains tables or fields that do not exist in your Contao database (e.g. because a certain third-party extension is not installed), these data will be ignored during import. So make sure that all extensions included in the theme are installed and up to date at the time of import.
+If a theme contains tables or fields that do not exist in your Contao database (e.g. because a certain third-party extension is not installed), this data will be ignored during import. So make sure that all extensions included in the theme are installed and up to date at the time of import.
 
-Customized templates also offer a lot of potential for conflict, unless they are managed in a unique subfolder separation. Existing templates are overwritten during the theme import - after a warning.
+Customized templates also have a lot of potential for conflict, unless they are managed in a unique seperate subfolder. Existing templates are overwritten during the theme import - after a warning.
 
 ## Activate themes
 
-After a theme has been successfully imported, all you need to do is activate it so that it is displayed in the frontend: "Activate" refers to the assignment of one of the page layouts of the new theme to a page in the page structure. As you already know from the previous instructions, the merging of design and content takes place in the Page Structure, and the Page Layout determines the layout of a page.
+After a theme has been successfully imported, all you need to do is activate it so that it is displayed in the frontend: "Activate" refers to the assignment of one of the page layouts of the new theme to a page in the page structure. The merging of design and content takes place in the Page Structure, and the Page Layout determines the layout of a page.
 
 For illustration purposes, the theme "[Contao Official Demo](https://packagist.org/packages/contao/official-demo)" was imported and the page layout "2 columns - \[ default \]" was assigned to the starting point of the website in the page structure.
 
-![Contao Official Demo](/de/layout/theme-manager/images/de/contao-official-demo.png?classes=shadow)
+![Contao Official Demo](/en/layout/theme-manager/images/en/contao-official-demo.png?classes=shadow)
 
 ## Sources of supply for themes
 
-The easiest way to find commercial themes is to use Google, for example by using the search term "Contao themes" (with or without a hyphen). The company Feyer Media GmbH &amp; Co KG by Contao initiator Leo Feyer offers commercial themes that were partly created by himself and partly by other providers. There is also an online demo of these themes where you can quickly get an impression of the designs. Another provider of themes is the company [RockSolid Themes](https://rocksolidthemes.com/de/contao/themes) from core developer Martin Auswöger.
+The easiest way to find commercial themes is to use Google, for example by using the search term "Contao themes" (with or without a hyphen). The company Feyer Media GmbH &amp; Co KG by Contao founder Leo Feyer offers commercial themes that were partly created by himself and partly by other providers. There is also an online demo of these themes where you can quickly get an impression of the designs. Another provider of themes is the company [RockSolid Themes](https://rocksolidthemes.com/en/contao/themes) from core developer Martin Auswöger.
 
-Despite all the theme euphoria, it should also be said that themes - just like third-party extensions - are always a potential gateway for hackers. After all, you upload files from other people to your server without knowing exactly what is stored there. Therefore, only install themes from trusted vendors and make sure to read the security advisories[ in the Contao blog](https://contao.org/de/news/sicherheitshinweise-zu-contao-themes.html).
+Despite all the theme euphoria, it should also be said that themes - just like third-party extensions - are always a potential gateway for hackers. After all, you upload files from other people to your server without knowing exactly what is stored there. Therefore, only install themes from trusted vendors and make sure to read the security advisories [in the Contao blog](https://contao.org/en/news/security-advice-regarding-contao-themes.html).
